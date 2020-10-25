@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: url(../images/login_bg.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.logo {
+  width: 1200px;
+  margin: 20px auto 0;
+  /* overflow: hidden; */
+}
+
+
+/* 登录和与注册盒子的样式 */
+.login,
+.register {
+  width: 400px;
+  height: 310px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/* 注册的盒子隐藏 */
+.register {
+  display: none;
+}
+/* 这是盒子的title */
+.login .title {
+  padding: 18px 0;
+  text-align: center;
+}
+.register .title {
+  padding: 18px 0;
+  text-align: center;
+}
+/* 整个表单的padding */
+.myForm {
+  padding: 0 30px;
+}
+/* 表单中的去注册 */
+.myForm a {
+  float: right;
+}
+.myForm .layui-form-item {
+  position: relative;
+}
+.myForm .layui-form-item input {
+  padding-left: 30px;
+}
+/* 表单中字体图标样式 */
+.myForm .layui-form-item i{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
