@@ -59,10 +59,36 @@ $('.register .myForm').on('submit', function (e) {
     success: function (res) {
       // 2.4 请求成功的时候要显示登陆表单
       if (res.status == 0) {
-        layer.alert(res.message);
+        layer.msg(res.message);
         $('.register').hide().prev().show()
       }else if (res.status === 1) {
-        layer.alert(res.message);
+        layer.msg(res.message);
+      }
+    }
+  })
+})
+
+
+
+
+
+
+// 登录
+$('.login .myForm').on('submit',function(e) {
+  e.preventDefault();
+
+  $.ajax({
+    type:'POST',
+    url:'http://ajax.frontend.itheima.net/api/login',
+    data:$(this).serialize(),
+    success:function(info) {
+      console.log(info);
+      if (info.status === 0) {
+        layer.msg(info.message)
+      }else if (info.status === 1) {
+        $('.username').val('');
+        $('.password').val('');
+        layer.msg('用户名或密码错误')
       }
     }
   })
