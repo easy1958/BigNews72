@@ -32,7 +32,6 @@ $(function() {
     },
     respass:function(value,item) {
       var pass = $('.myForm .pass').val();
-      console.log(pass);
       if (value !== pass) {
        $('.myForm .pass').val('');
        $('.myForm .respwd').val('');
@@ -59,21 +58,12 @@ $('.register .myForm').on('submit', function (e) {
     data: $(this).serialize(),
     success: function (res) {
       // 2.4 请求成功的时候要显示登陆表单
-      // if (res.status == 0) {
-      //   layer.open({
-      //     title:'温馨提示',
-      //     content:res.message,
-      //     time:1000
-      //   }) 
-      //   $('.register').hide().prev().show()
-      // }else {
-      //   layer.open({
-      //     title:'温馨提示',
-      //     content:res.message,
-      //     time:3000
-      //   }) 
-      // }
-      console.log(res);
+      if (res.status == 0) {
+        layer.alert(res.message);
+        $('.register').hide().prev().show()
+      }else if (res.status === 1) {
+        layer.alert(res.message);
+      }
     }
   })
 })
