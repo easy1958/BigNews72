@@ -15,6 +15,8 @@
   <div class="logo">
     <img src="../assets/images/logo.png" alt="">
   </div>
+
+
 <!-- 登录 -->
 <div class="login">
 <div class="title">
@@ -25,7 +27,7 @@
   <div class="layui-form-item">
     <i class="layui-icon layui-icon-username"></i>
     
-      <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+      <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
     </div>
   <!-- 第二个密码 -->
   
@@ -51,10 +53,6 @@
 
 
 
-
-
-
-
 <!-- 注册 -->
 <div class="register">
   <div class="title">
@@ -65,20 +63,20 @@
     <div class="layui-form-item">
       <i class="layui-icon layui-icon-username"></i>
       
-        <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        <input type="text" name="title" required  lay-verify="required|username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
       </div>
     <!-- 第二个密码 -->
     
     <div class="layui-form-item">
       <i class="layui-icon layui-icon-password"></i>
      
-        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        <input type="password" name="password" required lay-verify="required|pass|respass" placeholder="请输入密码" autocomplete="off" class="layui-input pass">
       </div>
       <!-- 第三个确认密码 -->
       <div class="layui-form-item">
         <i class="layui-icon layui-icon-password"></i>
        
-          <input type="password" name="password" required lay-verify="required" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+          <input type="password" name="password" required lay-verify="required|pass|respass" placeholder="再次确认密码" autocomplete="off" class="layui-input respwd">
         </div>
     <!-- 第四个登录 -->
     <div class="layui-form-item">
